@@ -38,3 +38,31 @@
   3. Enter subject and message
   4. Click "Send"
 - **Expected Result**: Email is sent successfully, appears in Sent folder.
+
+---
+
+## Test Case 4: Attempt to send email without recipient
+
+- **Test ID**: TC004  
+- **Module**: Compose Email  
+- **Title**: Sending email with missing recipient address  
+- **Preconditions**:
+  - User is logged in
+  - User is on the Gmail compose window
+
+- **Test Steps**:
+  1. Click "Compose"
+  2. Leave the "To" field empty
+  3. Enter any subject (e.g., "Test Email")
+  4. Enter a message body (e.g., "This is a test")
+  5. Click "Send"
+
+- **Expected Result**:
+  - A warning message appears (e.g., "Please specify at least one recipient.")
+  - Email is **not sent**
+  - The compose window remains open with data intact
+
+- **Test Type**: Negative test  
+- **Priority**: High  
+- **Severity if fails**: Medium
+
